@@ -43,3 +43,25 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# simplify adding forms into the project
+gem "simple_form"
+
+#add in Active Admin CMS, it's pretty new so we have to be specific
+gem "activeadmin", github: "gregbell/active_admin"
+
+#because Heroku asks for this gem
+
+gem 'rails_12factor', group: :production
+
+#make sure the users don't swear
+gem 'obscenity'
+
+#for scraping
+gem "nokogiri"
+
+gem "httparty"
+
+#add images and attachments to the site
+gem "paperclip"
+gem "aws-sdk"

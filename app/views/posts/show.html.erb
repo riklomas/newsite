@@ -1,0 +1,16 @@
+<% @posts.each do |post| %>
+
+<li>
+	<div class="details">
+		<h3><%= post.title %></h3>
+		<p><%= post.text %></p>
+		<%= image_tag @post.post_image(:medium) %>
+
+
+	</div>
+
+</li>
+
+<% end %>
+
+<%= link_to "Back to the categories", root_path, class: "button" %>

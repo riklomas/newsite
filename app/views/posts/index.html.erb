@@ -1,0 +1,18 @@
+<h2>Welcome to the Energy Snipper Blog</h2>
+
+<ul class="posts-list">
+
+<% @posts.each do |post| %>
+
+<li>
+	<div class="details">
+		<h3><%= link_to post.title, post_path(post) %></h3>
+		<p><%= post.text %></p>
+
+	</div>
+
+</li>
+
+<% end %>
+
+	</ul>
