@@ -1,5 +1,7 @@
 Newsite::Application.routes.draw do
 
+  get "electricity/switch"
+  get "contents/switch"
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   resources :posts do
