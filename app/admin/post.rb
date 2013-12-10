@@ -9,6 +9,18 @@ ActiveAdmin.register Post do
     default_actions
 
   end
+
+
+  form do |f|
+    f.inputs do
+      f.input :title
+      f.input :content
+      f.input :post_image
+    end
+    f.actions
+  end
+
+
   # See permitted parameters documentation:
   # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
