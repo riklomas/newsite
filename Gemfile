@@ -63,5 +63,5 @@ gem "nokogiri"
 gem "httparty"
 
 #add images and attachments to the site
-gem "paperclip"
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem "aws-sdk"
