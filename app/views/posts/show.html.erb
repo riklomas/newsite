@@ -5,6 +5,10 @@
 
 
 	</div>
+<%= simple_form_for @post do |f| %>
+<%= f.input :post_image %>
+<%= f.button :submit %>
 
+<% end %>
 
 <%= link_to "Back to index", root_path, class: "button" %>
