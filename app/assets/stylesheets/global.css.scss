@@ -1,0 +1,458 @@
+@import url(http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300,300italic,400italic,700,700italic,800,800italic);
+
+body, html {
+width:100%;
+height:100%;
+}
+
+body {
+	font-family: "Merriweather Sans", Arial; 
+	font-size: 16px;
+	line-height: 1.5;
+	color: #333333;
+}
+
+/*to make each area of content sit in the middle of the page*/
+div.container{
+	width: 960px;
+	margin: 0 auto 0 auto;
+	position: relative;
+	clear: both;
+}
+
+/*let's fix the header to the top of the browser */
+header {
+	/*position move elements around - different to floats*/
+	position: fixed;
+	/*where is it fixed*/
+	top: 0;
+	left: 0;
+
+	/*don't make it as small as it can be*/
+	width: 100%;
+	height: auto;
+
+	/*see through white background*/
+
+	background: rgba(255,255,255,1);
+	z-index: 1;
+
+	/*;*/
+
+	/*box-shadow works exactly the same way as text-shadow - see below */
+	/*left/right, up/down, blur, color */
+	box-shadow: 0 0 10px rgba(0,0,0,0.25);
+
+/*header moves from the side
+	transition: top 0.5s;*/
+
+}
+
+/*header moves when your mouse goes over it
+
+header:hover {
+	top: 10px;
+
+}
+*/
+
+h1 {
+	float: left;
+	/*try to make the h1 line up vertically with the nav */
+	line-height: 75px;
+	font-size: 36px;
+	color: black;
+	text-decoration: none;
+}
+
+/*to make the image sit in the middle use vertical alignment*/
+h1 img {
+	float: left;
+	margin: 15px 0 0 0;
+}
+
+/* the show menu button*/
+a#showmenu {
+	background: #ecf0f1;
+	color: #34495e;
+	text-decoration: none;
+	padding: 10px;
+	margin: 5px 0 5px 0;
+
+	/*this isn't going to be on the page by default*/
+
+	display: none;
+}
+
+nav {
+	float: right;
+	line-height: 75px;
+
+}
+
+/* for our nav links*/
+nav a {
+	/*color: #95a5a6;*/
+	color: #34495e;
+	font-weight: 700;
+	text-decoration: none;
+	padding: 10px;
+
+/*prefixes for brand new features in browsers*/
+	-webkit-transition: background 0.5s;
+	-moz-transition: background 0.5s;
+	-ms-transition: background 0.5s;
+	-o-trantiion: background 0.5s;
+	transition: background 0.5s;
+}
+
+nav a:hover {
+	background: #ecf0f1;
+
+}
+
+section#about {
+	/*background-color: rgba(204,229,255,0.2);*/
+	background-image: url(../images/modern_kitchen.jpg);
+	background-size: cover;
+	background-position: center;
+	height: 85%;
+	margin: 50px 0 0 0;
+	border-bottom: 1px solid #34495e;
+	z-index: 1;
+}
+
+article {
+	float: left;
+	position: relative;
+	width: 50%;
+	height: 100%;
+	text-align: center;
+	margin: 25px 0 0 0;
+	padding: 30px;
+	overflow: auto;
+}
+
+h2 {
+	font-size: 36px;
+	font-weight: 400;
+	color: #c0392b;
+	padding: 15px;
+	margin: 10px 0 0 10px;
+	background-color: rgba(255,255,255,0.9);
+}
+
+h3 {
+	font-size: 21px;
+	font-weight: 700;
+	color: #34495e;
+	margin: 20px 0 0 10px;
+	padding: 15px;
+	background-color: rgba(255,255,255,0.9);
+}
+
+h3 nav {
+	font-weight: 400;
+	color: #c0392b;
+
+}
+
+div.table h3{
+	float: right;
+	margin-right: 100px;
+	padding-top: 25px;
+	background-color: rgba(255,255,255,0.9);
+	width: 32%;
+}
+
+section#factsheet {
+	height: 100%;
+	position: relative;
+	clear: both;
+	overflow: auto;
+}
+
+table {
+	float: right;
+	text-align: center;
+	width: 32%;
+	color: #95a5a6;
+	font-size: 22px;
+	margin: 10px 100px 0 0; 
+	background-color: rgba(255,255,255,0.9);
+
+}
+
+th, td {
+	padding: 15px;
+	border-top: 2px solid #ecf0f1;
+	border-bottom: 2px solid #ecf0f1;
+
+}
+
+th {
+	vertical-align: middle;
+
+}
+
+td {
+	text-align: center;
+}
+
+
+div.table img  {
+	width: 40px;
+	text-align: center;
+
+
+}
+
+section#signup {
+		background-color: rgba(204,229,255,0.2);
+		padding-bottom: 20px;
+		border-bottom: 1px solid #34495e;
+}
+
+section#signup h4 {
+	text-align: center;
+	padding: 20px 0 10px 0;
+	font-size: 21px;
+	font-weight: 700;
+	color: #34495e;
+	float: center;
+
+
+}
+
+
+label {
+	display: inline;
+	font-size:16px; 
+	padding-bottom:5px; 
+	font-weight:bold;
+
+}
+
+form {
+	position: relative;
+	text-align: center;
+	vertical-align: text-top;
+	width: 100%;
+	margin: 8px auto 8px auto;
+	padding: 8px 8px 0 3%;
+	/*background: rgba(204,229,255,0.2);*/
+	/*border: 1px solid #34495e;*/
+	border-radius: 10px;
+	display: block;
+	float: center;
+
+}
+
+input[type=email] {
+	width: 60%;
+	font-size: 21px;
+	float: center;
+	padding: 5px 7px 5px 7px;
+	/*margin: 0 0 5px 10px;*/
+	border-radius: 8px;
+	text-align: center;
+}
+
+input[type=submit] {
+	clear: both;	
+	background: #27ae60;
+	/*background: linear-gradient(#2ecc71, #27ae60 50%); */
+	box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
+
+	color: white;
+
+	font-size: 21px;
+	font-weight: 700;
+
+	border: none;
+	width: 60%;
+	float: center;
+	text-align: center;
+	vertical-align: top;
+
+
+	padding: 5px 7px 5px 7px;
+	cursor: pointer;
+	display: inline-block;
+
+	border-radius: 8px;
+
+	transition: background 0.25s
+}
+
+input[type=submit]:hover {
+	background: #2ecc71; /*emerald from flatui*/
+}
+
+
+textarea {
+	width: 100%;
+	height: 120px;
+	padding: 10px;
+	resize: vertical; /*horizontal, none, all, vertical - to change text box.  Can't get smaller than above.*/
+
+}
+
+section#factsheet {
+	border-bottom: 1px solid #34495e;
+	height: 100%;
+}
+
+h5 {
+	font-size: 21px;
+	font-weight: 700;
+	color: #34495e;
+	/*margin: 30px 0 0 10px;*/
+	padding: 20px;
+	text-align: center;
+
+}
+
+table#facts {
+	text-align: left;
+	float: left;
+	width: 100%;
+
+}
+
+table#facts td {
+	text-align: left;
+	padding: 15px 20px 15px 20px;
+	vertical-align: middle; 	
+}
+
+table#facts img {
+	height: 60px;
+
+}
+
+section#disclaimer {
+	width: 100%;
+	font-weight: 300;
+	text-align: left;
+	font-size: 10px;
+	padding: 15px 20px 15px 20px;
+	border-bottom: 1px solid #34495e;
+
+}
+
+footer {
+	text-align: center;
+	font-weight: 300;
+	font-size: 10px;
+	padding: 10px 10px 10px 10px;
+	background-color: rgba(204,229,255,0.2);
+}
+
+/*i want to make the design a bit more fluid */
+@media screen and (max-width: 1000px) {
+	
+	div.container {
+		width: auto;
+		margin: 0 30px 0 20px;
+	}
+
+	section#about article {
+		padding: 20px 0 20px 0;
+	}
+
+}
+
+/*i want to break the floats at a smaller size*/
+@media screen and (max-width: 800px) {
+	h1,
+	nav,
+	article,
+	section#factsheet 
+	section#signup {
+		float: none;
+		width: 100%;
+
+	}
+
+	header {
+		text-align: center;
+		/*stop being fixed*/
+		position: static;
+	}
+
+	h1 {
+		margin: 20px 0 20px 0;
+	}
+
+	/*to make the nav links go below each other*/
+
+	nav a {
+		display: block;
+		padding: 5px;
+	}
+
+	/*section into , i want the background to cover the whole area*/
+
+	section#intro {
+		background-size: cover;
+
+		/*stop the fixed header gap*/
+		margin: 0;
+	}
+
+	article {
+		margin: 0;
+	}
+
+	article h2 {
+		margin: 50px 0 20px 0;
+	}
+
+	article h3 {
+		margin: 50px 0 20px 0;
+	}
+
+
+	/*show the hamburger menu*/
+	/*alternatively display inline - normal display*/
+
+	a#showmenu {
+		display: block;
+	}
+
+	h1 {
+		display: inline;
+	}
+
+	nav {
+		display: none;
+	}
+
+}
+
+@media screen and (max-width: 600px) {
+
+	h2 {
+		font-size: 25px;
+	}
+
+	h3 {
+		font-size: 20px;
+	}
+
+	h4 {
+		font-size: 15px;
+	}
+
+	td {
+		font-size: 15px;
+
+	}
+
+	h5 {
+		font-size: 15px;
+	}
+
+
+}
