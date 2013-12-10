@@ -1,16 +1,9 @@
-<% @posts.each do |post| %>
-
-<li>
-	<div class="details">
-		<h3><%= post.title %></h3>
-		<p><%= post.text %></p>
-		<%= image_tag @post.post_image(:medium) %>
+<div class="details">
+		<h3><%= @post.title %></h3>
+		<p><%= @post.content %></p>
 
 
 	</div>
 
-</li>
 
-<% end %>
-
-<%= link_to "Back to the categories", root_path, class: "button" %>
+<%= link_to "Back to index", root_path, class: "button" %>
